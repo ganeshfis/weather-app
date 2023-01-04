@@ -7,6 +7,8 @@
         placeholder="Search"
         dark
         borderless
+        :error="error"
+        :error-message="error_message"
       >
         <template v-slot:before>
           <q-icon @click="getLocation()" name="my_location" />
@@ -52,6 +54,13 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  watch: {
+    search() {
+      if (!this.search == "") {
+        this.error = false;
+      }
+    },
+  },
   name: "IndexPage",
   data() {
     return {
@@ -63,6 +72,8 @@ export default defineComponent({
       apiKey: "4525edf5c30127b0d124cd4d4df4c98d",
       newApiKey: "93ce8aeb1384ba729d951d974ed40ba2",
       YOUR_ACCESS_KEY: "4d432bb292dc45d2b8fdab096599c908",
+      error: false,
+      error_message: "",
     };
   },
   computed: {
@@ -111,6 +122,12 @@ export default defineComponent({
       });
     },
     getWeatherBySearch() {
+      if (this.search == "") {
+        this.error = true;
+        this.error_message = "Please enter the city name";
+        console.log(this);
+        return;
+      }
       this.$q.loading.show();
       this.$axios(
         `${this.apiUrl}?q=${this.search}&
