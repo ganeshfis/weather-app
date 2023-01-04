@@ -1,0 +1,32 @@
+{
+  "name": "quasar-weather",
+  "version": "0.0.1",
+  "description": "A Weather App",
+  "productName": "Weather App",
+  "author": "Ganesh K <ganesh.k@fisdom.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "axios": "^0.21.1",
+    "cordova": "^11.0.0",
+    "quasar": "^2.11.3",
+    "serve": "^14.1.2",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "autoprefixer": "^10.4.2",
+    "electron": "^22.0.0",
+    "electron-packager": "^15.2.0",
+    "postcss": "^8.4.14"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

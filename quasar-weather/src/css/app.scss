@@ -1,0 +1,19 @@
+// app global css in SCSS form
+.q-page {
+  background: linear-gradient(to bottom, #136a8a, #267871);
+}
+.bg-night {
+  background: linear-gradient(to bottom, #232526, #414345);
+}
+.bg-day {
+  background: linear-gradient (to bottom, #00b4db, #0083b0);
+}
+.degree {
+  top: -44px;
+}
+.skyline {
+  flex: 0 0 100px;
+  background: url(../assets/skyline.png);
+  background-size: contain;
+  background-position: center bottom;
+}
