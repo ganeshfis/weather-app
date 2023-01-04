@@ -52,7 +52,7 @@
 
 <script>
 import { defineComponent } from "vue";
-
+console.log("hii");
 export default defineComponent({
   watch: {
     search() {
